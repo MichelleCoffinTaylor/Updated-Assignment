@@ -1,0 +1,146 @@
+/* --- Style Sheet --- */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	max-width: 100vw;
+	width: 100vw;
+	overflow-x: hidden;
+}
+header {
+	width: 100%;
+	height: 100px;
+	background-color: #F04E23;
+}
+.logo {
+	width: 108px;
+	height: 65px;
+	margin-top: 15px;
+	padding-right: 10px;
+	float: right;
+}
+#main {
+	width: 100%;
+	height: 100%;
+	margin-top: 20px;
+}
+#map {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	background-color: #333333;
+}
+#map-container {
+	width: 90%;
+	height: 250px;
+	margin: 0 auto;
+	background-color: #333333;
+}
+.Headings {
+	padding-bottom: 15px;
+}
+.Vehicles {
+	font-family: arial;
+	color: #333333;
+}
+.font-family {
+	font-family: arial;
+	font-weight: bold;
+	font-size: 1em;
+	color: #333333;
+}
+.italic {
+	font-style: italic;
+}
+.float-right {
+	float: right;
+}
+form {
+	margin: 20px;
+}
+label {
+	float: left;
+}
+input {
+	width: 300px;
+	padding: 0.5em;
+	border: solid 1px #C8C8C8;
+	border-radius: 5px;
+	float: right;
+}
+input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none;
+        margin: 0; 
+}
+span{
+	width: 400px;
+	height: 10px;
+	font-family: arial;
+	font-size: .5em;
+	display: inline-block;
+	padding-left: 200px;
+}
+.check-box {
+	margin-right: 20px;
+}
+.button {
+	padding: 0.5em;
+	color: white;
+	background-color: #F04E23;
+	border: solid 1px #C8C8C8;
+	border-radius: 5px;
+}
+select {
+	width: 80px;
+	height: 27px;
+	float: right;
+	border: solid 1px #C8C8C8;
+	border-radius: 5px;
+}
+.prices {
+	width: 50px;
+}
+#TravelOptionsInput {
+	width: 60%;
+	height: 20px;
+	float: left;
+}
+#NumberOfDays{
+	float:left;
+	width:25%;
+	height:auto;
+	position:relative;
+	text-align: center;
+	margin-top: 6px;
+	border: solid 1px #C8C8C8;
+	border-radius: 5px;
+}
+.days-input{
+	float: left;
+	width: 10%;
+	height: auto;
+	position: relative;
+	background-color: #F04E23;
+	border: solid 1px #C8C8C8;
+	border-radius: 5px;
+	margin: 6px;
+	padding: 5px;
+}
+p {
+	width: 14px;
+	height: 14px;
+	color: white;
+	margin: 0 auto;
+}
+.pac-icon {
+	background-repeat: no-repeat;
+}
+
+/*.pac-container{
+	color: black;
+}*/
+	
+	

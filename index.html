@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title>Tourism New Zealand</title>
+	<!-- Browser Tab Icon -->
+	<link rel="icon" href="imgs/logo.png">
+	<!-- Style Sheet -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Link to Font Awesome -->
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<!-- Google Fonts PT Sans -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<img src="imgs/logo.png">
+		</div>
+	</header>
+	<div id="main">
+		<div id="map-container">
+			<div id="map"></div>
+		</div>
+		<div id="form">
+			<form id="FormValidation" method="post"	action="payment.html">
+				<!-- Starting Point -->
+				<div class="FormGroup">
+					<label for="StartingPoint" class="font-family">Starting Point</label>
+					<input id="start" class="form-control italic float-right" type="text" name="StartingPoint" placeholder="please enter a valid address" >
+					<span class="input-errors"></span>
+				</div>
+				<!-- End Point -->
+				<div class="FormGroup">
+					<label for="EndPoint" class="font-family">End Point</label>
+					<input id="end" class="form-control italic float-right" type="text" name="EndPoint" placeholder="please enter a valid address" style="font-family:'PT Sans', sans-serif;">
+					<span class="input-errors"></span>
+				</div>
+				<!-- Number of people Traveling -->
+				<div class="controls">
+					<div class="FormGroup">
+						<label for="NumberOfPeople" id="NumberOfPeople" class="font-family">Number of people traveling</label>
+						<select id="PeopleTraveling" class="control" name="number">
+							<option value=".NoPeople" id="0">Select</option>
+							<option value=".OnePerson" id="1">1</option>
+							<option value=".TwoPeople" id="2">2</option>
+							<option value=".ThreePeople" id="3">3</option>
+							<option value=".FourPeople" id="4">4</option>
+							<option value=".FivePeople" id="5">5</option>
+							<option value=".SixPeople" id="6">6</option>
+						</select>
+						<span class="input-errors"></span>
+					</div>
+					<!-- Transport Options Avaliable -->
+					<div id="TransportOptions" class="FormGroup">
+					<label for="TransportOptionsAvaliable" class="font-family">Transport Options Avaliable</label><br>
+					<!-- Motor Bike -->
+					<div class="mix OnePerson Vehicles">
+						<input id="MotorBike" class="form-control check-box" type="checkbox" name="TransportOptionsAvaliable" value="MotorBike">Motorbike<br>
+					</div>
+					<!-- Small Car -->
+					<div class="mix OnePerson TwoPeople Vehicles">
+						<input id="SmallCar" class="form-control check-box" type="checkbox" name="TransportOptionsAvaliable" value="SmallCar">Small Car<br>
+					</div>
+					<!-- Large Car -->
+					<div class="mix OnePerson TwoPeople ThreePeople FourPeople FivePeople Vehicles">
+						<input id="LargeCar" class="form-control check-box" type="checkbox" name="TransportOptionsAvaliable" value="LargeCar">Large Car<br>
+					</div>
+					<!-- Motor Home -->
+					<div class="mix TwoPeople ThreePeople FourPeople FivePeople SixPeople Vehicles">
+						<input id="MotorHome" class="form-control check-box" type="checkbox" name="TransportOptionsAvaliable" value="MotorHome">Motor Home<br>
+					</div>
+					<span class="input-errors"></span>
+				</div>
+				<!-- Number of days Traveling -->
+				<div class="FormGroup">
+					<label for="NumberOfDays" class="font-family">Number of days traveling</label>
+					<div id="TravelOptionsInput">
+						<div id="minus" class="days-input"><p><i class="fa fa-minus" aria-hidden="true"></i></p></div>
+						<input name="NumberOfDays" type="number" id="NumberOfDays" value="1" min="1" max="15" disabled>
+						<div id="plus" class="days-input"><p><i class="fa fa-plus" aria-hidden="true"></i></p></div>
+					</div>
+					<span class="input-errors"></span>
+				</div>
+				<!-- Transport Costs Heading -->
+				<div class="FormGroup">
+					<h1 class="font-family">Transport Costs</h1>
+				</div>
+				<!-- Vehicle Price -->
+				<div class="FormGroup">
+					<label for="VehiclePrice" class="font-family">Vehicle Price</label>
+					<input id="VehiclePrice" class="form-control prices" type="number" name="VehiclePrice" disabled>
+					<span class="input-errors"></span>
+				</div>
+				<!-- Cost of Fuel -->
+				<div class="FormGroup">
+					<label for="CostOfFuel" class="font-family">Cost of Fuel for the trip</label>
+					<input id="CostOfFuel" class="form-control prices" type="number" name="CostOfFuel" disabled>
+					</div>
+					<span class="input-errors"></span>
+				</div>
+				<!-- Total -->
+				<div class="FormGroup">
+					<label for="Total" class="font-family">Total</label>
+					<input id="Total" class="form-control prices" type="number" name="Total" disabled>
+					<span class="input-errors"></span>
+				</div>
+				<!-- Book your Holiday -->
+				<div class="FormGroup">
+					<h1 class="font-family">Book your Holiday</h1>
+				</div>
+				<!-- First Name -->
+				<div class="FormGroup">
+					<label for="FirstName" class="font-family">First Name</label>
+					<input  id="FirstName" class="form-control italic float-right" type="text" name="FirstName" placeholder="firstname" style="font-family:'PT Sans', sans-serif;">
+					<span class="input-errors"></span>
+				</div>
+				<!-- Last Name -->
+				<div class="FormGroup">
+					<label for="LastName" class="font-family">Last Name</label>
+					<input  id="LastName" class="form-control italic float-right"type="text" name="LastName" placeholder="lastname" style="font-family:'PT Sans', sans-serif;">
+					<span class="input-errors"></span>
+				</div>
+				<!--  Email -->
+				<div class="FormGroup">
+					<label for="Email" class="font-family">Email</label>
+					<input  id="Email" class="form-control italic float-right" type="email" name="Email" placeholder="example@email.com" style="font-family:'PT Sans', sans-serif;">
+					<span class="input-errors"></span>
+				</div>
+				<!-- Confirm Email -->
+				<div class="FormGroup">
+					<label for="ConfirmEmail" class="font-family">Confirm Email</label>
+					<input  id="ConfirmEmail" class="form-control italic float-right" type="email" name="ConfirmEmail" placeholder="example@email.com" style="font-family:'PT Sans', sans-serif;">
+					<span class="input-errors"></span>
+				</div>
+				<!-- Continue to Payment Button -->
+				<div class="FormGroup">
+					<button id="ContinueToPayment" class="button" type="submit">Continue to Payment</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- Link to jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Link to Mix it Up -->
+    <script type="text/javascript" src="js/mixitup.js"></script>
+	<!-- Link to My Javascript File -->
+	<script type="text/javascript" src="js/script.js"></script>
+	<!-- Link to Google Maps -->
+	 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlZ4re8yb4LLNB9m2VgcCpuhx347pTi74&libraries=geometry,places&callback=initMap" async defer></script>
+	<!-- API Key -->
+	<!-- AIzaSyDlZ4re8yb4LLNB9m2VgcCpuhx347pTi74 -->
+</body>
+</html>
